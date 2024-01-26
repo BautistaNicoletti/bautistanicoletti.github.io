@@ -1243,6 +1243,11 @@ a {
     .proyect .tecnologies ul li img {
         width: 30px;
     }
+    .proyect .img {
+        background-image: url('../images/grid-proyects/proyect1.png');
+        background-size: cover;
+        background-position: left;
+    }
 }
 
 @media (max-width: 350px) {
