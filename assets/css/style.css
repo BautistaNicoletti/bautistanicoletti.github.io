@@ -1044,6 +1044,20 @@ a {
     .proyect footer a:hover {
         letter-spacing: 1px;
     }
+    .grid__about p {
+    animation: text-color 1s infinite;
+    }
+    @keyframes text-color {
+        0% {
+            color: var(--dark-grey);
+        }
+        50% {
+            color: var(--semidark-grey);
+        }
+        100% {
+            color: var(--dark-grey);
+        }
+    }
     .grid__profile {
         grid-row: 1/3;
     }
