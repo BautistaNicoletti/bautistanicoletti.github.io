@@ -1096,7 +1096,7 @@ a {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 15px;
 }
@@ -1385,6 +1385,14 @@ a {
         display: flex;
         justify-content: center;
     }
+    .heading h1 {
+        color: var(--dark-color);
+        font-size: 2.3em;
+        font-weight: 700;
+    }
+    .btnContact {
+        font-size: 1.4em;
+    }
     .grid__home {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 300px 450px 150px 600px 300px 1fr 1fr 300px 1fr;
@@ -1423,6 +1431,10 @@ a {
     }
     .about__text {
         grid-row: 10/12;
+        grid-column: 1/-1;
+    }
+    .contact {
+        grid-row: 12/13;
         grid-column: 1/-1;
     }
 }
@@ -1490,6 +1502,20 @@ a {
             transform: translateX(calc(-120px * 9))
         }
     }
+    .heading h1 {
+        color: var(--dark-color);
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .heading img {
+        width: 55px;
+    }
+    .header__contact a {
+        font-size: 1.1em;
+    }
+    .btnContact {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 490px) {
@@ -1542,6 +1568,33 @@ a {
         width: 50px;
         transition: 200ms;
     }
+    .header__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+    .heading img {
+        display: none;
+    }
+    .contact-btnGroup {
+        flex-direction: column;
+    }
+    .contact-btnMedias ul {
+        width: 100%;
+    }
+    .contact-btnMedias ul li a {
+        padding: 20px;
+    }
+    .contact-btnMedias ul li a img {
+        width: 40px;
+    }
+    .btnContact {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -1566,6 +1619,15 @@ a {
     }
     .proyect .tecnologies ul li img {
         width: 25px;
+    }
+    .header__contact a {
+        font-size: .9em;
+    }
+    .contact-btnMedias ul li a {
+        padding: 15px;
+    }
+    .contact-btnMedias ul li a img {
+        width: 30px;
     }
 }
 
