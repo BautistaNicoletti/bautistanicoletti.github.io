@@ -12,14 +12,12 @@
 
 :root {
     /* Dark Colors */
-    /*--main-color: #4169E1;
-    --secundary-color: ;
-    --dark-color: #1E1E1E;
-    --dark-grey: #333333;
-    --semidark-grey: #5f5f5f;
-    --grey: #E0E0E0;
-    --light-grey: #eee;
-    --white: #fff;*/
+    --main-color: #4169E1;
+    --dark-mode: #0E0C10;
+    --dark-grey-mode: #1C1D24;
+    --semidark-grey-mode: #25262E;
+    --light-grey-mode: #eee;
+    --grey-mode: #E0E0E0;
 
     /* Colors */
     --main-color: #4169E1;
@@ -40,6 +38,127 @@
     --box_shadow-primary: 0px 4px 32px -10px #1E1E1E;
 }
 
+/* Dark Mode */
+/*general style*/
+body.dark {
+    background-color: var(--dark-mode);
+}
+body.dark .header {
+    background-color: var(--dark-mode);
+}
+body.dark .box {
+    background-color: var(--dark-grey-mode);
+}
+body.dark .header ul li a {
+    color: var(--light-grey-mode);
+}
+body.dark .text-white {
+    color: var(--light-grey-mode);
+}
+body.dark .text-grey {
+    color: var(--grey-mode);
+}
+/*header*/
+.header .links .btn__navS {
+    display: none;
+}
+body.dark .header .logo img:hover {
+    filter: brightness(100%);
+}
+body.dark .tooltip-works ul li {
+    background-color: rgba(14, 12, 16, 0.8);
+    backdrop-filter: blur(10px);
+}
+body.dark .tooltip-works ul li:hover{
+    background-color: var(--main-color);
+}
+body.dark .header .btn__nav:hover {
+    background-color: var(--light-grey-mode);
+    color: var(--dark-mode);
+}
+body.dark .btn__navS:hover {
+    background-color: var(--light-grey-mode);
+}
+body.dark .btn__navS:hover ion-icon {
+    filter: invert(100%);
+}
+body.dark .btn__profile:hover {
+    background-color: var(--light-grey-mode);
+    color: var(--dark-mode);
+}
+body.dark .header__about a:hover  {
+    background-color: var(--main-color);
+}
+/*profile*/
+body.dark .bg-profile {
+    background-image: none;
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+}
+/*medias*/
+body.dark .contact-btnMedias ul li:nth-child(1):hover {
+    background-color: var(--semidark-grey);
+}
+body.dark .btn-medias ul li:hover {
+    background-color: var(--light-grey-mode);
+}
+body.dark .btn-medias ul li:hover img {
+    filter: invert(100%);
+}
+/*skills*/
+body.dark .tecnoSkills::before {
+    background: linear-gradient(
+        90deg,
+        #1C1D24,
+        #e0e0e000
+    );
+}
+body.dark .tecnoSkills::after {
+    background: linear-gradient(
+        -90deg,
+        #1C1D24,
+        #e0e0e000
+    );
+}
+body.dark .tecnoSkills li {
+    background-color: var(--semidark-grey-mode);
+}
+body.dark .tecnoSkills ul li:hover {
+    background-color: var(--light-grey-mode);
+}
+body.dark .tecnoSkills ul li:hover img {
+    filter: brightness(50%);
+}
+body.dark .tecnoSkills ul li img {
+    filter: brightness(400%);
+}
+/*about-text*/
+body.dark .btn_footerAbout a:first-child:hover {
+    background-color: var(--dark-mode);
+}
+body.dark .btn_footerAbout a:last-child:hover {
+    background-color: var(--dark-mode);
+}
+body.dark .btn_footerAbout a:last-child {
+    background-color: var(--semidark-grey-mode);
+}
+body.dark .box_textAbout .text-about {
+    color: var(--grey-mode);
+    background-color: var(--semidark-grey-mode);
+}
+/*contact*/
+body.dark .contact {
+    background-image: none;
+}
+body.dark .btnContact {
+    background-color: var(--white);
+    color: var(--dark-mode);
+}
+body.dark .btnContact:hover {
+    color: var(--white);
+}
+
+
 /* General Styles */
 
 *,
@@ -58,6 +177,7 @@ html {
 
 body {
     background-color: var(--white);
+    transition: .3s ease all;
 }
 
 body::-webkit-scrollbar {
@@ -290,6 +410,16 @@ a {
     box-shadow: var(--box_shadow-primary)
 }
 
+.btn__navS .sun {
+    display: none;
+}
+.btn__navS.active .moon{
+    display: none;
+}
+.btn__navS.active .sun{
+    display: flex;
+}
+
 .header .btn__toggle {
     display: none;
     justify-content: center;
@@ -414,7 +544,7 @@ a {
 .grid__home {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 450px 450px 1fr 280px;
+    grid-template-rows: 450px 450px;
     gap: 15px;
     grid-template-areas: 
         "profile profile profile profile-img profile-img medias"
@@ -447,7 +577,7 @@ a {
 }
 
 .bg-profile {
-        background-image: url('../images/background/background.webp');
+    background-image: url('../images/background/background.webp');
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
     position: absolute;
@@ -562,7 +692,6 @@ a {
 .btn-medias ul li:hover {
     background-color: var(--dark-color);
 }
-
 .btn-medias ul li:hover img {
     scale: 1.1;
     rotate: -15deg;
@@ -589,10 +718,10 @@ a {
     grid-area: profile-img;
     border-radius: 20px;
     background-color: var(--main-color);
-    background-image: url('../images');
+    background-image: url('../images/profile/retrato.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     cursor: pointer;
 }
 
@@ -792,7 +921,7 @@ a {
 .btn_footerAbout a ion-icon {
     padding-left: 8px;
     font-size: 1.5em;
-    transition: 500ms;
+    transition: 200ms;
 }
 .btn_footerAbout a:hover:first-child ion-icon {
     scale: 1.1;
@@ -822,7 +951,7 @@ a {
 }
 
 .about__img .img-boxAbout {
-    background-image: url('../images/');
+    background-image: url('../images/profile/perfil.jpg');
     background-color: var(--main-color);
     background-size: cover;
     background-position: center center;
@@ -1160,7 +1289,7 @@ a {
     position: relative;
     display: flex;
     align-items: center;
-    transition: 500ms;
+    transition: 200ms;
 }
 .btnContact:first-child:hover {
     background: linear-gradient(90deg, #ffb30b, #3a86ff, #86d6a0, #ffb30b);
@@ -1232,6 +1361,9 @@ a {
     .container {
         max-width: 1000px;
     }
+    .header .links .btn__navS {
+        display: flex;
+    }
     .header .btn__navGroup {
         display: none;
     }
@@ -1252,7 +1384,7 @@ a {
     }
     .grid__home {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 300px 150px 250px 200px 200px 1fr 1fr;
+        grid-template-rows: 300px 150px 250px 200px 1fr 1fr 1fr;
     }
     .grid__profile {
         grid-row: 1/3;
@@ -1317,20 +1449,6 @@ a {
     .proyect footer a:hover {
         letter-spacing: 1px;
     }
-    .grid__about p {
-    animation: text-color 1s infinite;
-    }
-    @keyframes text-color {
-        0% {
-            color: var(--dark-grey);
-        }
-        50% {
-            color: var(--semidark-grey);
-        }
-        100% {
-            color: var(--dark-grey);
-        }
-    }
     .box_textAbout {
         width: 100%;
     }
@@ -1366,6 +1484,9 @@ a {
     }
     .btn__profile {
         font-size: 1.4em;
+    }
+    .img__profile {
+        background-position: center center;
     }
     .proyect .tecnologies ul li img {
         width: 25px;

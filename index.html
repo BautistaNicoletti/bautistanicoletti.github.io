@@ -44,12 +44,14 @@
     
     <header id="header" class="header" data-aos="fade-down">
         <div class="container">
+
             <a href="index.html" class="logo">
                 <img src="assets/images/logo/logo.png" alt="logo">
             </a>
             <a href="index.html" class="logo-sm">
                 <img src="assets/images/logo/logo-sm.png" alt="logo">
             </a>
+
             <nav class="links">
                 <ul>
                     <li><a href="#home" id="sec">Inicio</a></li>
@@ -69,20 +71,28 @@
                         </div>
                     </li>
                     <li><a href="#skills" id="sec">Habilidades</a></li>
+                    <a class="btn__navS" id="btn-darkL">
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                    </a>
                 </ul>
             </nav>
 
             <div class="btn__navGroup">
-                <a href="#contact" class="btn__nav">Contacto</a>
-                <a href="" class="btn__navS">
-                    <ion-icon name="moon"></ion-icon>
+                <a href="#contact" class="btn__nav">
+                    Contacto
+                </a>
+                
+                <a class="btn__navS" id="btn-dark">
+                    <ion-icon name="moon" class="moon"></ion-icon>
+                    <ion-icon name="sunny" class="sun"></ion-icon>
                 </a>
             </div>
 
             <div class="menu">
                 <div class="menu__profile">
                     <div class="profile_imgMenu">
-                        <img src="" alt="Perfil">
+                        <img src="assets/images/profile/perfil-menu.jpg">
                     </div>
                     <h3>Bautista Nicoletti</h3>
                     <p>Web Developer</p>
@@ -134,15 +144,15 @@
         <div class="container">
             <section class="grid__home">
 
-                <section class="grid__profile" data-aos="fade-zoom-in">
+                <section class="grid__profile box" data-aos="fade-zoom-in">
                     <div class="bg-profile"></div>
                     <div class="content__profile">
                         <div class="top__profile">
-                            <h1>Bautista Nicoletti</h1>
+                            <h1 class="text-white">Bautista Nicoletti</h1>
                             <h3><span class="typed" translate="no"></span></h3>
                         </div>
                         <div class="bottom__profile">
-                            <a href="#" class="btn__profile">Contáctame
+                            <a href="mailto:bautistanicoletti@gmail.com" class="btn__profile">Contáctame
                             <ion-icon name="send-sharp"></ion-icon>   
                             </a>
                         </div>
@@ -153,7 +163,7 @@
                 
                 </section>
 
-                <section class="grid__medias" data-aos="fade-zoom-in">
+                <section class="grid__medias box" data-aos="fade-zoom-in">
                     <div class="btn-medias">
                     <ul>
                         <li>
@@ -175,7 +185,7 @@
                     </div>
                 </section>
 
-                <section class="grid__proyects" data-aos="fade-up"
+                <section class="grid__proyects box" data-aos="fade-up"
                 data-aos-delay="0">
                     <div class="img-gridProyects"></div>
 
@@ -189,17 +199,17 @@
                     </header>
                 </section>
 
-                <section class="grid__about" data-aos="fade-up"
+                <section class="grid__about box" data-aos="fade-up"
                 data-aos-delay="0">
                     <div class="header__about">
-                        <h1>Sobre Mí</h1>
+                        <h1 class="text-white">Sobre Mí</h1>
                         <div class="place-arrow">
                             <a href="#about " class="arrow-btn">
                                 <img src="assets/images/icon/arrow.webp">
                             </a>
                         </div>
                     </div>
-                    <p id="aboutText">
+                    <p id="aboutText" class="text-grey">
                         Mi nombre es Bautista Franco Nicoletti. Empecé a programar a mis 14 años de edad y desde entonces evolucioné como freelancer en el desarrollo web.
                         <!--¡Hola! Soy Programador Frontend, tengo 16 años de edad. Me encanta la tecnología y me apasiona todo lo relacionado con el desarrollo web.-->
                     </p>
@@ -213,11 +223,11 @@
                     </template>
                 </section>
 
-                <section class="portfolio" id="proyects" data-aos="fade-up"
+                <section class="portfolio box" id="proyects" data-aos="fade-up"
                 data-aos-delay="0">
 
                     <header class="header__portfolio">
-                    <h1>Proyectos</h1>
+                    <h1 class="text-white">Proyectos</h1>
                     </header>
 
                     <div class="proyects_portfolio">
@@ -263,11 +273,11 @@
 
                 </section>
 
-                <section class="skills" id="skills" data-aos="fade-up"
+                <section class="skills box" id="skills" data-aos="fade-up"
                 data-aos-delay="0">
 
                     <header class="header__skills">
-                    <h1>Habilidades</h1>
+                    <h1 class="text-white">Habilidades</h1>
                     </header>
 
                     <article class="tecnoSkills">
@@ -300,10 +310,10 @@
                     <div class="img-boxAbout"></div>
                 </section>
     
-                <section class="about__text" data-aos="fade-up"
+                <section class="about__text box" data-aos="fade-up"
                 data-aos-delay="0">
                     <header class="header_aboutText">
-                        <h1>Quién Soy</h1>
+                        <h1 class="text-white">Quién Soy</h1>
                     </header>
                     <div class="box_textAbout">
                         <div class="text-about">
@@ -328,15 +338,15 @@
                     </footer>
                 </section>
 
-                <section class="contact" id="contact" data-aos="fade-up"
+                <section class="contact box" id="contact" data-aos="fade-up"
                 data-aos-delay="0">
 
                     <header class="header__contact">
                     <div class="heading">
-                        <h1>Trabajemos Juntos</h1>
+                        <h1 class="text-white">Trabajemos Juntos</h1>
                         <img src="assets/images/icon/emoji.webp">
                     </div>
-                    <a href="mailto:bautistanicoletti@gmail.com">bautistanicoletti@gmail.com</a>
+                    <a href="mailto:bautistanicoletti@gmail.com" class="text-grey">bautistanicoletti@gmail.com</a>
                     </header>
 
                     <footer class="contact-btnGroup">

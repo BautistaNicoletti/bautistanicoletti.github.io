@@ -33,6 +33,20 @@ window.onscroll = function() {
     }
 };
 
+/* Btn Dark */
+
+const btnDark = document.querySelector('#btn-dark'),
+btnDarkL = document.querySelector('#btn-darkL');
+
+btnDark.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnDark.classList.toggle('active');
+});
+btnDarkL.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnDarkL.classList.toggle('active');
+})
+
 /* Home */
 
 const typed = new Typed('.typed', {
