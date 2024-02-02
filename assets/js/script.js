@@ -36,7 +36,8 @@ window.onscroll = function() {
 /* Btn Dark */
 
 const btnDark = document.querySelector('#btn-dark'),
-btnDarkL = document.querySelector('#btn-darkL');
+btnDarkL = document.querySelector('#btn-darkL'),
+btnDarkM = document.querySelector('#btn-darkM');
 
 btnDark.addEventListener('click', () => {
     document.body.classList.toggle('dark');
@@ -45,7 +46,11 @@ btnDark.addEventListener('click', () => {
 btnDarkL.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     btnDarkL.classList.toggle('active');
-})
+});
+btnDarkM.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnDarkM.classList.toggle('active');
+});
 
 /* Home */
 
