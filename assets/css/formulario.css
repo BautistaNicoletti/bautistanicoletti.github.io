@@ -1,0 +1,226 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* || Colors */
+    --main-color: #0B1328;
+    --accent-color: #4169E1;
+    --accent-color-50: rgb(65, 105, 225, 0.5);
+    --accent-color-10: rgb(65, 105, 225, 0.1);
+    --accent-color-5: rgb(65, 105, 225, 0.05);
+    --accent-color-dark-5: #101D3B;
+    --accent-color-dark-10: #142247;
+    --accent-color-dark-50: #28428C;
+    
+    --black: rgb(11, 19, 40);
+    --black-10: rgba(11, 19, 40, 0.1);
+
+    --white: rgb(233, 238, 252);
+	--white-80: rgb(233, 238, 252, 0.8);
+	--white-30: rgb(233, 238, 252, 0.3);
+	--white-10: rgb(233, 238, 252, 0.1);
+	--white-5: rgb(233, 238, 252, 0.05);
+
+    --main-gradient: linear-gradient(
+        #0B1328, #101D3C);
+
+    --instagram-color: linear-gradient(
+        45deg,
+        #833ab4,#fd1d1d,#fcb045
+    );
+    --linkedin-color: #0A8CD2;
+    --dribbble-color: linear-gradient(
+        to right,
+        #C52A66, #EB528D
+    );
+    --whatsapp-color: #40C351;
+    --cancel-color: #e14141;
+    /* || Fonts */
+    --main-font: "Montserrat", sans-serif;
+    --secundary-font: ;
+    
+    /* Font Size */
+    --title-size: 40px;
+    --subtitle-size: 32px;
+    --paragraph-size: 14px;
+    --button-size: 16px;
+    --link-size: 14px;
+    
+    /* Font Weight */
+    --light-weight: 400;
+	--regular-weight: 500;
+    --semibold-weight: 600;
+    --bold-weight: 700;
+
+    /* || Padding */
+    --big-padding: 10px 32px;
+    --small-padding: 8px 20px;
+
+    /* || Shadow */
+    --main-shadow: 0px 4px 32px var(--black-80);
+    --hover-shadow: 0 8px 48px var(--black-80);
+
+    /* || Border */
+    --main-border: 2px solid var(--white-5);
+    --white-border: 2px solid var(--white);
+    
+    /* || Border Radius */
+	--main-radius: 8px;
+
+    /* || Transition */ 
+    --fast: 200ms;
+    --slow: 500ms;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  body {
+    font-family: var(--main-font);
+    background-color: var(--accent-color-dark-5);
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  /* Circle Gradient */
+.circle-gradient {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: radial-gradient(
+      var(--accent-color),
+      var(--main-color)
+  );
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  filter: blur(200px);
+  z-index: -1;
+}
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    position: relative;
+    z-index: 10;
+    background: var(--white-5);
+    border-radius: var(--main-radius);
+    border: var(--main-border);
+  }
+  
+  .imgLogo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .formulario__titulo,
+  .formulario__subtitulo,
+  .formulario__parrafo {
+    text-align: center;
+    margin-top: 0;
+  }
+  .formulario__titulo {
+    font-size: 20px;
+    font-weight: var(--semibold-weight);
+    color: var(--white);
+  }
+  .formulario__parrafo {
+    font-size: 13px;
+    font-weight: var(--light-weight);
+    color: var(--white-80);
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  .formulario__input,
+  .formulario__label {
+    display: block;
+    width: 100%;
+  }
+  option {
+    background-color: var(--main-color);
+    color: var(--white-80);
+
+  }
+  ::placeholder {
+    color: var(--white-30);
+  }
+  .formulario__input {
+    padding: 12px;
+    background: var(--accent-color-5);
+    border: var(--main-border);
+    margin-bottom: 16px;
+    border-radius: 8px;
+    color: var(--white-80);
+  }
+  .formulario__input:focus {
+    outline: none;
+    box-shadow: var(--hover-shadow);
+  }
+  .formulario__input:active {
+    background-color: var(--main-color);
+  }
+  .formulario__label {
+    font-size: 14px;
+    color: var(--white);
+    padding: 5px;
+    margin: 2px;
+  }
+  .formulario__submit {
+    background: var(--accent-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 16px 32px;
+    cursor: pointer;
+    border: var(--main-border);
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    box-shadow: var(--main-shadow);
+    transition: var(--fast);
+  }
+  .formulario__submit:hover {
+    background: var(--whatsapp-color);
+    box-shadow: var(--hover-shadow);
+  }
+  
+  .formulario__input,
+  .formulario__submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /*.fijar {
+      margin-top: -120px;
+  } */
+  
+  /* respuesta del formulario */
+  #respuesta {
+    width: 100%;
+    min-height: 50px;
+    margin: 5px;
+    padding: 5px;
+  }
+  #respuesta.fail {
+    color: var(--cancel-color);
+  }
+  #respuesta.send {
+    color: var(--whatsapp-color);
+  }

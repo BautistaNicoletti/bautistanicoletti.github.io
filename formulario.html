@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable-no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+
+    <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+
+	<!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Agencia Bautista™ | Desarrollo Web</title>
+    <link rel="stylesheet" href="assets/css/formulario.css" />
+  </head>
+  <body>
+
+    <section class="container">
+      <div class="circle-gradient"></div>
+      <form action="" class="formulario">
+        <img src="assets/images/logo-profile.webp" class="imgLogo" />
+  
+        <h1 class="formulario__titulo">Agencia Bautista™</h1>
+        <p class="formulario__parrafo">
+          Rellena el formulario para hablar sobre tu proyecto.
+        </p>
+  
+        <label for="cliente" class="formulario__label">Nombre Completo</label>
+        <input
+          id="cliente"
+          type="text"
+          class="formulario__input"
+          placeholder="Nombre y apellidos"
+        />
+        <label for="servicios" class="formulario__label">Plan de servicio</label>
+        <select id="servicios" name="servicios" class="formulario__input">
+          <option>Emprendedor</option>
+          <option>Básico</option>
+          <option>Empresarial</option>
+          <option>Ninguno hasta ahora</option>
+        </select>
+  
+        <label for="enlace" class="formulario__label"
+          >Enlace sitio web (solo si corresponde)</label
+        >
+        <input id="enlace" type="tel" class="formulario__input" placeholder="Ej: misitioweb.com o @cuentainstagram"/>
+  
+        <label for="urgencia" class="formulario__label">Urgencia del proyecto</label>
+        <select id="urgencia" name="plazo" class="formulario__input">
+          <option>1-2 semanas</option>
+          <option>2-4 semanas</option>
+          <option>Sin prisa</option>
+        </select>
+  
+        <div id="respuesta"></div>
+  
+        <button id="submit" class="formulario__submit">Enviar a WhatsApp</button>
+      </form>
+    </section>
+    
+
+    <script src="assets/js/formulario.js"></script>
+  </body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable-no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+
+    <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+
+	<!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Agencia Bautista™ | Desarrollo Web</title>
+</head>
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.webp" alt="logo">
+            </a>
+    
+            <nav class="nav__header">
+                <ul>
+                    <li><a class="link" href="#proyectos">Proyectos</a></li>
+                    <li><a class="link" href="#precios">Precios</a></li>
+                    <li><a class="link" href="#preguntas">Preguntas</a></li>
+                </ul>
+            </nav>
+    
+            <ul class="media__header">
+                <li><a href="https://www.instagram.com/bautista.nicoletti/" target="_blank">
+                    <img src="data:image/png;base64,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" alt="instagram-new">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/bautista-nicoletti/" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD9ElEQVR4nO2dPW8kRRCG+wCfgAACIgLuBCkxxAgkiCAyhy46QhBIgEDGSEj8BGIkRAqRLRAhwfkCfHcJDjZCIEvGu9O9bPXaCfK5ChfqxTZmtfPh8a67Z+Z9pJaT7XVVvVPV1TPjtjEAAAAAAAAAAAAAAAAAQHNQ1YcykrccyffW88ASi/OibRiWWIJPwbchyY3gq0mJgdfrzsv92IFylzfu9b1eM6kEf3J1xA+KXmpWeB5EFyGkYseufJ0am6p6JZoAk5ofPwgacwxJ3owmgCP5IXYAXOxBsh5NgNzaT/KJqi6ZlqCqS45kZZav1nM/mmF5rWZP9appGT3VqzMFIJZoRuWlpWkpLjV/kzOoa/4mZ1DX/K1j0O6+PmW9fGFJNizJliNZC61c1H66KwIM/jx8wRG72d2E/Lizo4+ZhGm0AOHKzwu+Ox38lUmYRgsQyk7ZpsYS/x3uLZlEabYAJBtlArgwxvK2SZSmC7BVRQA7lg9NojRagNDtVBEg8/y6SZRGCxBazXIB2Pb7+rhJlEYLEPr80GoWLMBHbsTLJmEaLUBge1sfDa1m6Hamr3yXePBbIcDUM+RbdiQfhZqfctlppQBNxaXmb3IGdc3f5Ayagao+Mhzq03ZPn/NenzRt8ve8BjmSTwuHl/dnzbNjfqVoniV55+znw5rivLxrSW47z3/9zz7iA0f8uyX+Jhvzy4v0Nz0BSvYB1nM2cx7xl4VzibdPPms9vxGe05b9rv/aX9nIxvrsIvztnACW5OPJfqJi8M/MH2b04Pl5+9spAdyIX60V/NNM4F/L2mEI4HOF25vH65HWywcQoE4GzGlYzzuq+vAsGyZ2oATJwkXIRocvQoALZoD1vO9IfnKevw0/Q4k6x/zV6d9/agcyQMoWUrFePp9eTEcjfcJ5/rqaAPwdBKifAZ+ZHCa3w0nuVPiOzbzvQAb4wrIzKHsnNWzSKpSvPyBArQwof6UllKKyvYIlHufNRwb4QhHeKxPgWMzid5OIDyBAjQywJDdNBSzxbyUZcJQ3FxngC6/c16oI4Lz0ysSEADUyIBvzS6YCluQXCDDvm3EeAlwohR0EqMe8aqiDABDAYREWrAEoQYI21KALwiJs5tR0LBx0QQIBHDZi2AcYlCDBvSDshCOQXFfQNX+TM6hr/iZnUNf8Tc6grvmLI8sk7pFlBYf2rbTp3Ljev+fFreY8w9iNZlg4S7nsIUvrB8laNAHCQdbRA+Ajj5h/YH58dPG96EHw0cbP0Y9aCwdYd/Tw7v4u6TMmBYIhzsvd2EFxlzc2kwn+CSEVJ0fSkKyHq6OF/8ChPznzaMTL0csOAAAAAAAAAAAAAAAAAGDOxT99h49F/obCwwAAAABJRU5ErkJggg==" alt="linkedin">
+                </a></li>
+                <li><a href="https://dribbble.com/Agencia_Bautista" target="_blank">
+                    <img src="data:image/png;base64,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" alt="dribbble">
+                </a></li>
+            </ul>
+    
+            <div class="menu">
+                <div class="menu__profile">
+                    <div class="profile_imgMenu">
+                        <img src="assets/images/logo-profile.webp">
+                    </div>
+                    <h1 class="subtitle">Agencia Bautista™</h1>
+                    <p class="text">Desarrollo web</p>
+                </div>
+                <div class="menu__medias">
+                    <ul>
+                        <li><a href="https://www.instagram.com/bautista.nicoletti/" target="_blank">
+                            <img src="data:image/png;base64,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" alt="instagram-new">
+                        </a></li>
+                        <li><a href="https://www.linkedin.com/in/bautista-nicoletti/" target="_blank">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD9ElEQVR4nO2dPW8kRRCG+wCfgAACIgLuBCkxxAgkiCAyhy46QhBIgEDGSEj8BGIkRAqRLRAhwfkCfHcJDjZCIEvGu9O9bPXaCfK5ChfqxTZmtfPh8a67Z+Z9pJaT7XVVvVPV1TPjtjEAAAAAAAAAAAAAAAAAQHNQ1YcykrccyffW88ASi/OibRiWWIJPwbchyY3gq0mJgdfrzsv92IFylzfu9b1eM6kEf3J1xA+KXmpWeB5EFyGkYseufJ0am6p6JZoAk5ofPwgacwxJ3owmgCP5IXYAXOxBsh5NgNzaT/KJqi6ZlqCqS45kZZav1nM/mmF5rWZP9appGT3VqzMFIJZoRuWlpWkpLjV/kzOoa/4mZ1DX/K1j0O6+PmW9fGFJNizJliNZC61c1H66KwIM/jx8wRG72d2E/Lizo4+ZhGm0AOHKzwu+Ox38lUmYRgsQyk7ZpsYS/x3uLZlEabYAJBtlArgwxvK2SZSmC7BVRQA7lg9NojRagNDtVBEg8/y6SZRGCxBazXIB2Pb7+rhJlEYLEPr80GoWLMBHbsTLJmEaLUBge1sfDa1m6Hamr3yXePBbIcDUM+RbdiQfhZqfctlppQBNxaXmb3IGdc3f5Ayagao+Mhzq03ZPn/NenzRt8ve8BjmSTwuHl/dnzbNjfqVoniV55+znw5rivLxrSW47z3/9zz7iA0f8uyX+Jhvzy4v0Nz0BSvYB1nM2cx7xl4VzibdPPms9vxGe05b9rv/aX9nIxvrsIvztnACW5OPJfqJi8M/MH2b04Pl5+9spAdyIX60V/NNM4F/L2mEI4HOF25vH65HWywcQoE4GzGlYzzuq+vAsGyZ2oATJwkXIRocvQoALZoD1vO9IfnKevw0/Q4k6x/zV6d9/agcyQMoWUrFePp9eTEcjfcJ5/rqaAPwdBKifAZ+ZHCa3w0nuVPiOzbzvQAb4wrIzKHsnNWzSKpSvPyBArQwof6UllKKyvYIlHufNRwb4QhHeKxPgWMzid5OIDyBAjQywJDdNBSzxbyUZcJQ3FxngC6/c16oI4Lz0ysSEADUyIBvzS6YCluQXCDDvm3EeAlwohR0EqMe8aqiDABDAYREWrAEoQYI21KALwiJs5tR0LBx0QQIBHDZi2AcYlCDBvSDshCOQXFfQNX+TM6hr/iZnUNf8Tc6grvmLI8sk7pFlBYf2rbTp3Ljev+fFreY8w9iNZlg4S7nsIUvrB8laNAHCQdbRA+Ajj5h/YH58dPG96EHw0cbP0Y9aCwdYd/Tw7v4u6TMmBYIhzsvd2EFxlzc2kwn+CSEVJ0fSkKyHq6OF/8ChPznzaMTL0csOAAAAAAAAAAAAAAAAAGDOxT99h49F/obCwwAAAABJRU5ErkJggg==" alt="linkedin">
+                        </a></li>
+                        <li><a href="https://dribbble.com/Agencia_Bautista" target="_blank">
+                            <img src="data:image/png;base64,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" alt="dribbble">
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="menu__section">
+                    <ul>
+                        <li><a class="link" href="#proyectos">Proyectos</a></li>
+                        <li><a class="link" href="#precios">Precios</a></li>
+                        <li><a class="link" href="#preguntas">Preguntas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn__toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>            
+        </div>
+    </header>
+
+	<main>
+    <a class="btn__whatsapp" href="https://wa.link/24dm2b" target="_blank">
+        <img src="data:image/png;base64,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" alt="whatsapp--v1">
+    </a>
+
+	<section class="hero">
+        <div class="container">
+            <div class="circle-gradient"></div>
+            <section class="text__hero">
+                <div class="social_trust">
+                    <a href="https://g.page/r/CSAOyKp1vyGUEAI/review" target="_blank" class="link">5.0/5.0 
+                        <div class="social_trust-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F19E39"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F19E39"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F19E39"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F19E39"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F19E39"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                        </div>
+                    </a>
+                </div>
+                <h1 class="title">Impulsa tu negocio con un sitio web efectivo</h1>
+                <p class="text">
+                    Diseño y desarrollo web para atraer más clientes y aumentar tus ventas. Hagamos que tu marca destaque con presencia digital.
+                </p>
+                <div class="btn_hero">
+                    <a class="btn primary whatsapp" target="_blank" href="formulario.html">
+                        Hablemos
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHKUlEQVR4nO1ZeWwUZRRfPKIx8T4SNWr806gx0T+M/lWvaIwaQUIQr6hBRFQ8IMjlhaggCgohiuCBNx6J0KC0YsEWtHa7c3R3Z75v5pvZbo89elJ2d/Z+5k3odqa77R4dNCZ9yZdsZmfee7/vnd/7XK5pmqZpmjIBwAk8Idd7CFvRoWgNAtWCPFHjnKxmceFvfCZSbT8nqas8knLjLoATXf81cYRczFO2nidswMcCsa5wNDM0chQSyRRksznI5/Pmwt/4bGgkBl3hvqyfdcYEwoZ4wja5vezSf11xrzd4jkC0HTxRDVTaSKagWjJSaeiO9GUFwgyBsp0eSs//V5TnZGUOT9gRVDyTzcJUKZvLoVUyPGFHOYk9cNwUb2pqOkkg2navqifiRrKkMr1GGPaGf4NN6jZY5l0DTwvLYZGw3Py9Uf0I9oQaoNvoLfltIpkEn6on0Bput/tkZ5XX9VMFojUowR4Dd8xKecjDb9E/YCG/DOqaZ1a0nuCWQH2oEdK5tI1XLpcD1tWbFCk76Hb3nObkzjdo3aEUBqSV3EMCzOderFjx8Wtu2wJo6W+1b0g+D4GecEog7IAjluCp9jHuvFX5HORhm/5FzYqPXxuUrZCyWANloSXQnaakvEdis72qHre6jZE1YIXvTceUrzu2nhNXQzwbt7mTVw0YNQe2KHaeLRA2bA1Y3PmV/rccV77u2FosrrJZAgObJ2zELcvnVQ+Asm3BUDRj9U8n3WYyd7ISpliBss+rUt7tD1yIRcqa51sHPUXCbm65Dz7r/BakEQp/9P8Fdx6e5wiIFktgYxXHYtehKJdUDECQ1TexUI0yyeSz8EDbU0WCdnXvtu3Wh/rnjgCY27bAlmKxYvOEbaxIeQCYIRAtir3LKO2LNBUJedC9yKwB4wvZTc2zHAFRH2q0tR3YO1XUAAp+5VqfGohZFVvEv1QkAOOhFGHVdQLAAm6Jja+fBWLtfuWGsgA4SV0aDEcL9osk+0ru6u7QvpIADg387VhA9xphWzBzkrKyLIAOqtUPHjla+PDXyO8lmX8Z/KEkgIN9hx0DUG9xI2zTRUVrLAtApBqz5v4tbEdJ5q9I64uUH0gNwZy/5zsG4H314wJvjEmBskD5GCBsOJ0ZS58TFa7bDs2B4fQRG4A18nuOKV/XPBNe8r1R4I0pXSAsVj4GZJbEMj5KWOInEvAB217U3DmVheqaZ8Izwgpbf8TJaqYsAF5WbS3zix2vTCgAC5l0VLGBwL7fKQDPCisLfHOVAhAo60+lxzqIV6UNkwp52P202eAVTJ3PwFLva44AWO5ba3MhPLWVB6BoqjWIt2qflhW02r/OVtSwIZsoHtBCX3X9CLNbHy/LdzPbYQniJIiU6WUBiIr2ff/wWHA29bVUtFvbA18VZSU8Qt7950OFd16V3ikAxVZhT6gB5rUtnJDnL+H9BV6Y2kWq/1oWgEdSFwdDkUIh608NVByYpWpDLBM3d3wt2WRztTHfzpln6PG8UCYW0VHC3oyT1WVlAfB+9aoORR87WQDAC5MEcikXyearm1b82FNfxAcHAlbyqXqsXVKvKwvAdCPKuq1xsD/aXFXwPckthUA8WDGA1+V3i3g0RA7Y/F+gDM0xoyIAPGVrOi1uhCexxz3PVwXi1pbZsI5uga5Ez6TKtw3xcEvL7KLMZrViMBzNCIS95apm8sYTNWFNpyio1nSII5cfevaYVhkNYoytbfoXJtDxvo8FcZQyGUyfaqJdki6qGMAxK3wdHhgqMAoZEUdy+x2H74e7/nxwwv8/CXxtsxB6gkC0ra5qSaQ6PxIbi2Vsn50AMNla5X/bdNdRiiUM8yDjZuzMqpSXJOl0jrBULjfGDLvP46n8av86W5rFdqZD0ROcrNxb9e63S8o9NNAVs+Zqa0Fyct3UPAs+0nfadh4bNxrsNniibXHVQjjEDfcPFjj6RkhB4O2H5sKSjtfgm66foDF6EB5tX1yz8o+0PwOeIdHm86g8jjFFyvbWfAkiUNZrPdTjKQuDix/2Fg9kIW+2G8+Lqyuq2PjOs+JKcyCcy9sHxThCoZ3dBipPKT2lJuV5Wb5cpCwBNVB/ahB+72sxxyvY92AFx4XBiU3hvsgB851SFEsYps+LVNsypesnTlIXBHrCpS8ALGZGgdaTW62UzmShszeS5gkbxNhzTZVEhe0bPDJSJAivkaKDw6AEe+O8zHByrOPhp7M3kprowmMywm+CoWgai5RAtc1/UXqGI3cBeKOI1Q+r8MDwCGg9IfRJvDkJ4YwSr5hGh62tfv+5vKy+jDHToWhx7GKxFUfl8HtMhbjSmYz5DPnhOzjxFogWxpaFV9ULXE4Rp+tnYf73KjreIg6LlP3MS+yxdp92Wblv2wm5AltxgbLvRKpRPNmhhXBhMRKppoiKtpuXlRc8RLum4sasWhIkdjXnU66s+sNpmibX/5L+AahqYyCllOFHAAAAAElFTkSuQmCC" alt="whatsapp--v1">
+                    </a>
+                    <a class="btn secundary" href="servicios.html">Descubre cómo</a>
+                </div>
+            </section>
+
+            <section class="img__hero">
+                <img src="">
+            </section>
+
+        </div>
+    </section>
+
+    <section class="project" id="proyectos">
+        <div class="container">
+            <div class="circle-gradient"></div>
+            <header class="header__project">
+                <div class="header_project-left">
+                    <h1 class="subtitle">Proyectos</h1>
+                    <p class="text">
+                        Tu negocio puede ser el próximo caso de éxito.
+                    </p>
+                </div>
+                <a class="btn primary" href="#salepage" target="_blank">Descubrir</a>
+            </header>
+
+            <section class="box__project">
+                <div class="project-box">
+                    <header class="top_project">
+                        <h6>Marina Nicoletti</h6>
+                        <p class="text">Sitio web realizado para la venta de un libro autobiográfico</p>
+                    </header>
+                    <a target="_blank" class="btn secundary" href="#salepage">Ver proyecto</a>
+                </div>
+                <div class="project-box">
+                    <header class="top_project">
+                        <h6>Grupo Bio Laboratorios</h6>
+                        <p class="text">Diseñado para optimizar la comunicación entre pacientes y el sanatorio</p>
+                    </header>
+                    <a class="btn secundary" target="_blank" href="https://bautistanicoletti.github.io/marina-nicoletti/">Ver proyecto</a>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section class="prices" id="precios">
+        <div class="container">
+            <div class="circle-gradient"></div>
+            <div class="text__center">
+                <h1 class="subtitle">Plan de Precios</h1>
+                <p class="text">Empecemos tu proyecto hoy</p>
+            </div>
+
+    <div class="wrapper">
+		<div class="card">
+			<div class="price-section">
+				<div class="pricing-card__discount">
+					<span class="strike_price">$211.261 ARS</span>
+					<span class="discount-tag">Ahorra 24%</span>
+				</div>
+				<span class="price">
+					<span class="price__currency">AR$</span>
+					<span class="price_number">158.458</span>
+					<span class="price__suffix">/1 año</span>
+				</span>
+			</div>
+			<div class="package-name"></div>
+			<ul class="features">
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>4 secciones</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Página única</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Plantilla web adaptada</span>
+				</li>
+                <li>
+					<span class="icon cross">
+						<i class="fas fa-times"></i>
+					</span>
+					<span>Diseño 100% personalizado</span>
+				</li>
+                <li>
+					<span class="icon cross">
+						<i class="fas fa-times"></i>
+					</span>
+					<span>Estrategia de marketing</span>
+				</li>
+                <div id="features_hidden">
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Adaptable a multidispositivos</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Google Maps + redes sociales</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Formulario de contacto</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Incluye dominio + hosting</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon cross">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <span>SEO básico</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon cross">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <span>Edición de fotografías</span>
+                    </li>
+                </div>
+			</ul>
+			<a href="formulario.html" target="_blank" class="btn secundary">Consultar plan</a>
+		</div>
+		<div class="card premium">
+			<div class="pricing-card__badge">
+				<div class="product-badge">
+					<p>Recomendado</p>
+				</div>
+			</div>
+			<div class="price-section">
+				<div class="pricing-card__discount">
+					<span class="strike_price">$528.189 ARS</span>
+					<span class="discount-tag">Ahorra 62%</span>
+				</div>
+				<span class="price">
+					<span class="price__currency">AR$</span>
+					<span class="price_number">200.275</span>
+					<span class="price__suffix">/1 año</span>
+				</span>
+			</div>
+			<div class="package-name"></div>
+			<ul class="features">
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>6 secciones</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Hasta 2 Páginas</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Diseño 100% personalizado</span>
+				</li>
+                <li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Funcionalidades avanzadas</span>
+				</li>
+                <li>
+					<span class="icon cross">
+						<i class="fas fa-times"></i>
+					</span>
+					<span>Estrategia de marketing</span>
+				</li>
+                <div class="features_hidden">
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Adaptable a multidispositivos</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Google Maps + redes sociales</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Formulario de contacto</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Incluye dominio + hosting</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>SEO básico</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Edición de fotografías básicas</span>
+                    </li>
+                </div>
+			</ul>
+            <a href="formulario.html" target="_blank" class="btn primary">Consultar plan</a>
+		</div>
+		<div class="card business">
+			<div class="price-section">
+				<div class="pricing-card__discount">
+					<span class="strike_price">$951.075 ARS</span>
+					<span class="discount-tag">Ahorra 44%</span>
+				</div>
+				<span class="price">
+					<span class="price__currency">AR$</span>
+					<span class="price_number">528.180</span>
+					<span class="price__suffix">/1 año</span>
+				</span>
+			</div>
+			<div class="package-name"></div>
+			<ul class="features">
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>12 secciones</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Hasta 4 páginas</span>
+				</li>
+				<li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Diseño 100% personalizado</span>
+				</li>
+                <li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Funcionalidades avanzadas</span>
+				</li>
+                <li>
+					<span class="icon check">
+						<i class="fas fa-check"></i>
+					</span>
+					<span>Estrategia de marketing</span>
+				</li>
+                <div class="feature_hidden">
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Identidad de marca + logo</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Adaptable a multidispositivos</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Google Maps + redes sociales</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Formulario de contacto</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Incluye dominio + hosting</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>SEO avanzado</span>
+                    </li>
+                    <li class="feature">
+                        <span class="icon check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span>Edición de fotografías avanzada</span>
+                    </li>
+                </div>
+				
+			</ul>
+            <a href="formulario.html" target="_blank" class="btn secundary">Consultar plan</a>
+		</div>
+    </div>
+
+        <a class="btn_more" id="verMasBtn">Ver más servicios</a>
+
+        </div>
+    </section>
+
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="circle-gradient"></div>
+            <div class="text__center">
+                <h1 class="title">¿Tienes Preguntas?</h1>
+                <p class="text">
+                    Cada marca es única, tu sitio web también debería serlo, veamos cómo podemos hacer lo mismo por ti
+                </p>
+                <a href="formulario.html" target="_blank" class="btn primary whatsapp">
+                    Hablemos por WhatsApp
+                    <img src="data:image/png;base64,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" alt="whatsapp--v1">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faqs" id="preguntas">
+        <div class="container">
+            <div class="circle-gradient"></div>
+            <div class="text__center">
+                <h1 class="subtitle">Preguntas Frecuentes</h1>
+            </div>
+
+            <ul class="dropdown first">
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <div class="h-dropdown">
+                            <h5>¿Cuánto cuesta un sitio web?</h5>
+                            <ion-icon name="chevron-forward-sharp"></ion-icon>
+                        </div>
+                    <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <p href="#" class="dropdown__anchor">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt aspernatur, quo itaque ipsam harum natus sed dolorem reprehenderit hic.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dropdown">
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <div class="h-dropdown">
+                            <h5>¿Cuánto cuesta un sitio web?</h5>
+                            <ion-icon name="chevron-forward-sharp"></ion-icon>
+                        </div>
+                    <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <Div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <p href="#" class="dropdown__anchor">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt aspernatur, quo itaque ipsam harum natus sed dolorem reprehenderit hic.
+                                </p>
+                            </li>
+                        </ul>
+                    </Div>
+                </li>
+            </ul>
+            <ul class="dropdown">
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <div class="h-dropdown">
+                            <h5>¿Cuánto cuesta un sitio web?</h5>
+                            <ion-icon name="chevron-forward-sharp"></ion-icon>
+                        </div>
+                    <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <p href="#" class="dropdown__anchor">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt aspernatur, quo itaque ipsam harum natus sed dolorem reprehenderit hic.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dropdown">
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <div class="h-dropdown">
+                            <h5>¿Cuánto cuesta un sitio web?</h5>
+                            <ion-icon name="chevron-forward-sharp"></ion-icon>
+                        </div>
+                    <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <p href="#" class="dropdown__anchor">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt aspernatur, quo itaque ipsam harum natus sed dolorem reprehenderit hic:
+                                    <a class="link-faq" target="_blank" href="formulario.html">whatsapp</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+	</main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+
+            <header class="top__footer">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-negative.webp" alt="logo">
+                </a>
+        
+                <nav class="nav__footer">
+                    <ul>
+                        <li><a class="link" href="#proyectos">Proyectos</a></li>
+                        <li><a class="link" href="#precios">Precios</a></li>
+                        <li><a class="link" href="#preguntas">Preguntas</a></li>
+                    </ul>
+                </nav>
+        
+                <ul class="media__footer">
+                    <li><a href="https://www.instagram.com/bautista.nicoletti/" target="_blank">
+                        <img src="data:image/png;base64,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" alt="instagram-new">
+                    </a></li>
+                    <li><a href="https://www.linkedin.com/in/bautista-nicoletti/" target="_blank">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD9ElEQVR4nO2dPW8kRRCG+wCfgAACIgLuBCkxxAgkiCAyhy46QhBIgEDGSEj8BGIkRAqRLRAhwfkCfHcJDjZCIEvGu9O9bPXaCfK5ChfqxTZmtfPh8a67Z+Z9pJaT7XVVvVPV1TPjtjEAAAAAAAAAAAAAAAAAQHNQ1YcykrccyffW88ASi/OibRiWWIJPwbchyY3gq0mJgdfrzsv92IFylzfu9b1eM6kEf3J1xA+KXmpWeB5EFyGkYseufJ0am6p6JZoAk5ofPwgacwxJ3owmgCP5IXYAXOxBsh5NgNzaT/KJqi6ZlqCqS45kZZav1nM/mmF5rWZP9appGT3VqzMFIJZoRuWlpWkpLjV/kzOoa/4mZ1DX/K1j0O6+PmW9fGFJNizJliNZC61c1H66KwIM/jx8wRG72d2E/Lizo4+ZhGm0AOHKzwu+Ox38lUmYRgsQyk7ZpsYS/x3uLZlEabYAJBtlArgwxvK2SZSmC7BVRQA7lg9NojRagNDtVBEg8/y6SZRGCxBazXIB2Pb7+rhJlEYLEPr80GoWLMBHbsTLJmEaLUBge1sfDa1m6Hamr3yXePBbIcDUM+RbdiQfhZqfctlppQBNxaXmb3IGdc3f5Ayagao+Mhzq03ZPn/NenzRt8ve8BjmSTwuHl/dnzbNjfqVoniV55+znw5rivLxrSW47z3/9zz7iA0f8uyX+Jhvzy4v0Nz0BSvYB1nM2cx7xl4VzibdPPms9vxGe05b9rv/aX9nIxvrsIvztnACW5OPJfqJi8M/MH2b04Pl5+9spAdyIX60V/NNM4F/L2mEI4HOF25vH65HWywcQoE4GzGlYzzuq+vAsGyZ2oATJwkXIRocvQoALZoD1vO9IfnKevw0/Q4k6x/zV6d9/agcyQMoWUrFePp9eTEcjfcJ5/rqaAPwdBKifAZ+ZHCa3w0nuVPiOzbzvQAb4wrIzKHsnNWzSKpSvPyBArQwof6UllKKyvYIlHufNRwb4QhHeKxPgWMzid5OIDyBAjQywJDdNBSzxbyUZcJQ3FxngC6/c16oI4Lz0ysSEADUyIBvzS6YCluQXCDDvm3EeAlwohR0EqMe8aqiDABDAYREWrAEoQYI21KALwiJs5tR0LBx0QQIBHDZi2AcYlCDBvSDshCOQXFfQNX+TM6hr/iZnUNf8Tc6grvmLI8sk7pFlBYf2rbTp3Ljev+fFreY8w9iNZlg4S7nsIUvrB8laNAHCQdbRA+Ajj5h/YH58dPG96EHw0cbP0Y9aCwdYd/Tw7v4u6TMmBYIhzsvd2EFxlzc2kwn+CSEVJ0fSkKyHq6OF/8ChPznzaMTL0csOAAAAAAAAAAAAAAAAAGDOxT99h49F/obCwwAAAABJRU5ErkJggg==" alt="linkedin">
+                    </a></li>
+                    <li><a href="https://dribbble.com/Agencia_Bautista" target="_blank">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKiElEQVR4nO1dC6weRRVeEUURRUXiW4kGJZrgWwEf+IIQ5eFbKQJVo7FWRREjGjEYQLRKFaOJmuADiUoUHw1aQRF8UK1EHrVaQErb6/3vP7P/ztn/Vmi5ew4dc2b3wuXvzuzuv6//b/dLNr3p3d2ZPTNzzplzvjPX8zp06NChQ4cOHTp06NChQ4cOHTp0mABorR88GEYv6gf0PgH4JanolxJog1S4WSgEqXCBr+TnzfHv6Bd8rx/Qe/lZfkfb3zFVCAL9ZB/oo1LRrwTgUALpMpdQGCYD95HBQD+p7e+bSGzZoh8mgE4RQFcJhVRW6I7BIAG0ltu6Xev9vL0d/b5+hAA6QwDO1iV066VQSoXnBoF+lLe3QWu9rwjo41Jh0Ljgdx+IAU8C7pO3N2AwjF4sFN3QuuBhdCDoFqmil3t7KjZq/VCh8GKhcNcYwrlWKPyCAFpmBnConzE7rw/id2qtHzIc6sfMgX66UNGREug0qfB8qegaCXh3QRuxSwKu5vd6exJYYKVmvaI1WusHFW2XB6cf4quFwm9KQFGgzfX9UB/i7Qnoh/ga4wrmm313Oe75cJl+sI73Fb1dAq3LuRrAh+hV3jRDhvgWqfCe7I+l60QQHZHMVosbijsFLBxeRb/idvKsSNwpQnyTN42QIb0n26fHbT7gG5c+J4A+5zKUVfnvrNIk0KlZnpj5hpCWe9M28zOFr/AyAH3g6LNa631iA2oRCOCFlfZV6ifwrjtrEKZmJbDO56XrXNZAp7jeEQT6KVKhsgpDRUdW2WezGhR9yj1pcOfE24TY23EYXCPU6BV53uUreodjFdzW6+n9q+6/BDo7yzBPrHcU+/l2wyYAZwYDfViRdwqFlzret6rqIKAA7OfwkP7G7q03aeBNlmvmzwX6OUXfCaAPZENtmY0oYeF5VfR9ZqgfK4H+mUP4i+roIm+SwGrFvsPFHWW2+FLhcQ5hrC8b75/brg+WQH/PL3wz+Pey2+xNAniDY+IoVlVBy8q2IRyqiOP8477Xn9eHCoX/cQna/ju6cSKSPSaqaf+AS6toY3ZeH2TCx+m2YJ71d9F3+grf4NoDmBUd0nKh6Io6Br8SSKkPsH6Ews1Vxtr7it5ZxUDPzOiHC4XfyBEUPJvv723Xj7MaZ4V+Hd5YbghFn7B9AM+wytsDutI2W/tB9NLM5wN8vQT8d6aeV/jVkXbfbR38kD7mtZdGxLn0D6Br6mjTn9eHOmJL62wRU/bABNCvcxjXXQLos6PP83sF0J8tKnC2lfQm72ZthssPF15YX7t4ocMwnvzAexcOF4CXxC5r5qxf4NiQrV0foqPzttsIOIGePiPoyrrtjgDspQsDtw0G+pFxFJauzRT6/ZPmjlwqTNF1lm/+jdckzK7REjfpAx5fd/vCpZMBt+cVfDLzf8iDlqddM7DpA4gc1POaAiexLR+ztQnfWMc6+S+FBL37QM1wgqZgu/ta7R7QSq8pWMO3Cs+vq81e7A6exDlb3rnm0uvpamoH01HGdR+lwq+lfzv93GsCPMNtEU8foldW0cbcdn2wCPAYEyIGvJx3q2Ml80eMrFD4/R7op5XNplnerziX4dUNZiVYlvR8kSih7+snmjQkb7BiQV8igK635QFKCF4xo6IqWmKihlLtTJ3e331g0qtlAG4Vij4ggT7EAo0vvEACfoeXp1D0Rwm0kXeVQmFUqZDBJnz6JLPvqpaBBPpdantNpC4NS7kJ4UH5i+NUdchAKjyviXSppXHDNNaTceG/Ys5PejhZAP63DpKVbRPaiCF2hZ5rnc0KUSi6mQXO6Uoh9OMX+9QP8bW257i2oGoZ8KYtvY90k1c3pMItDczsHRxvFwq/x4QsNtYcxXT2C+ivllVwW9XeCXtS6SsA7/TqRlWMZlN8oZgQS2uEwq8nbOnjOOk9Dg2xD3iCtT323RV+PnEI1nBe11TUJJU25gIcJv/Oxv9PN3AAz0wChefypq2vFp7Lnp4Jd6S3M/DqRhK0Spu1315yfUUAflEAfUYo+qDpPKuJcOH5ZvZIfUDV/QpD/eicSfWyqjBi22MZgHu8tgagDUZxr6f3l0Cnm8CgdWI0eDU0AKkqiCnitTe+lM0GuDoP6bfhARi0ZoRnlX5q3W334njQqqK8/wYH4M7W3NCq6YKj2Tc2ooVDzbkvvCsxxlYWRJ6rITfUuhE7tZ72oqME4KYqBG1C0BAdzd4M7yNsdWFMCGN+Kk8qEeKbpaKzOFaVRGHtYZQmNmLWUITC86o3sLi6yKwUgP9jGomNpWciqkP9zDL9SlgVP2gtFGELxklFv6+qjcFAH1Zk1psoKtBpi5s19shszoIAOqds/5LAYjvBOC7/t82+Kko9+4AncGg7p+DX2miPSYworZ+byvSPN2I2J8APF15Q5t2tJmR0nGY8J5fKUXSLCPF1rvf1g+hltufLxO2t7IimEjIuQ8whhRKD+t3MGa8w4kHKu9I4R1G1rmZWXXrf6AqvKTAn0vJhvaJJ+Y1cVwD00xwqZ0PRJc6DZXnXxsIfnZRPOZLyK7ymwOk9azlPgG8t4ukIoN/mmPkXj8M+Y3fT+t4xvCEBeKKlf7g0PN4IbIJjDyGvMRMZdMGE+VCK7sHh6Ko4nULRn9ogo6V3BmiZ1chlGGOj8wEvdxtaHLDBK99P/HIV/FWXUe8repfXEjm3V5Qoy5CA33KrHdzGRNyqqndsBr1Iwt7m+7dGzk06dWZRwipv6zPUzh1VViLyarMVd8gAj83zDhng26z9BTrDaws8g1hVWFSIzwSrB9wPeLyrFlcAbhqn2iULXBRu6eMFeRI9tkJBHthWCzScPNF4dvxsJLxgj2Yq3FqH8E0fFb3f0r/rs56VgD9xrNjm+KBOppiimx2q6Mwkc7XBIXx/MNDPrquPvq+fNY4dsMa94u/6x0QU6d0XMrZwN40r6Tj7QQLezXTHuvtocxg4V209csGS5uRwCXtF3iQhYS07PJv6yljzQAL+OH310Vmj95p8AZ9F2lCVfiUwIWCg9cUGAFc31T9mZ1j68KOl9zFzw+o13e9iT95RBQx2H10zZ2Tm/aHJkwrnBtFLLLP51sV7OLSdcdhIUJbeXjv4SBf3cTXxLnfURa0bJu6U4gKzPk+IVivcp3vhjrwnvbQOPtwo68AmLq4OGj401R6edpc7xSfu4oneNCEu8888NWsrJ72b6lPOsPfuXhzQ6d40gldCpjoCc13dhFvnyA9Y1c7Uzfw0m5DXMAugqzhcUccGx5xFB/Tp3MI3Sf0p0flZ4FNtDSM577IHnGVfmwevzGCYBDp7NoCrCh4Qvm7ivZ0x2QQXFWWfifhvCFzNvCOTg1DRUUyaYi4qu7G8/+ATr8x5dUF0hCHrxsccr2WmRkF9fy8P1sT6+RXSWgpu2Kj2i2mFddIrJwomRs+JfYV+24JPdr0rJyaw1iRu13o/Lm3lYrrmhY+CS2lbj+dP0ECczKeO1PwnTJCJAJzD7f6EibP4glYy07iSqnlTKW/OfVvROHVk2qG13ofJWOYgcD6oKa64vykpsFOLf8Yq+ZkL62407Gi+N6TlHNlsjC7YoUOHDh06dOjQoUOHDh06dOjQoYPnxv8BKENMxrE3HCYAAAAASUVORK5CYII=" alt="dribbble">
+                    </a></li>
+                </ul>
+            </header>
+            
+            <footer class="bottom__footer">
+                <span class="link">Copyright © 2025 - Agencia Bautista™</span>
+                <a href="#terms" class="link">Términos de Servicio</a>
+                <a href="#terms" class="link">Política de Privacidad</a>
+                <span class="link">Icons by <a href="https://iconos8.es/">Icons8</a></span>
+            </footer>
+
+        </div>
+    </footer>
+
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+
+<!-- IonIcons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
