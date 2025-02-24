@@ -107,6 +107,10 @@ body::-webkit-scrollbar {
     display: content;
 }
 
+main {
+    overflow: hidden;
+}
+
 h1 {font-size: 56px; color: var(--black);}
 h2 {font-size: 48px; color: var(--black);}
 h3 {font-size: 40px; color: var(--black);}
@@ -1078,6 +1082,11 @@ a {text-decoration: none; color: inherit;}
     }
     h6 {
         font-size: 18px;
+    }
+
+    /* procces */
+    .grid__process {
+        grid-template-columns: 1fr;
     }
 
     /* project */

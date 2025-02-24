@@ -80,6 +80,7 @@
   body {
     font-family: var(--main-font);
     background-color: var(--accent-color-dark-5);
+    overflow: hidden;
   }
 
   .container {
